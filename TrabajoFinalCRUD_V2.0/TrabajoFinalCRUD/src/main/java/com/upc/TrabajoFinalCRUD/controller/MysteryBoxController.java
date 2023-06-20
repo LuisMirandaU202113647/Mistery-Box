@@ -1,6 +1,5 @@
 package com.upc.TrabajoFinalCRUD.controller;
 
-import com.upc.TrabajoFinalCRUD.model.dto.MysteryBoxDTO;
 import com.upc.TrabajoFinalCRUD.model.entity.MysteryBox;
 import com.upc.TrabajoFinalCRUD.service.MysteryBoxService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,7 @@ public class MysteryBoxController {
         return new ResponseEntity<MysteryBox>(mysteryBoxService.getMysteryBoxById(mysteryBoxId),HttpStatus.OK);
     }
     @PostMapping("/insert")
-    public ResponseEntity<MysteryBox> insertMysteryBox(@RequestBody MysteryBoxDTO mysteryBoxDetails){
+    public ResponseEntity<MysteryBox> insertMysteryBox(@RequestBody MysteryBox mysteryBoxDetails){
         return new ResponseEntity<MysteryBox>(mysteryBoxService.insertMysteryBox(mysteryBoxDetails),HttpStatus.CREATED);
     }
 
