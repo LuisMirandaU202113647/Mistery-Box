@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "mistery_box")
 public class MysteryBox {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
