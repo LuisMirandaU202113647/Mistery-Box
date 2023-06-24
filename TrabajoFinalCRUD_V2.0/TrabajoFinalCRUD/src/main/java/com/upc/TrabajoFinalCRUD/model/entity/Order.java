@@ -5,12 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="order_mb")
 public class Order {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -21,6 +20,7 @@ public class Order {
     @ManyToOne()
     @JoinColumn(name="customerId")
     private Customer customer;
-    private Date date;
+    private String date;
     private Long totalPrice;
+
 }
